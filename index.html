@@ -123,22 +123,37 @@ body, html {
 <div class="w3-center ">
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3958.6634080201807!2d100.5497943!3d7.164854!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304d3215556d5f01%3A0xac470f1a897d0f9b!2z4LiE4Li44LiT4LiI4Li04LiVIOC4i-C4teC4p-C4tOC4pyDguYDguIHguLLguLDguKLguK0!5e0!3m2!1sen!2sth!4v1493719192909" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
  </div>
-    <script>
-function myMap()
-{
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+    <!-- End page content -->
+</div>
 
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<!-- Add Google Maps -->
+<div class="w3-center ">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3958.6634080201807!2d100.5497943!3d7.164854!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304d3215556d5f01%3A0xac470f1a897d0f9b!2z4LiE4Li44LiT4LiI4Li04LiVIOC4i-C4teC4p-C4tOC4pyDguYDguIHguLLguLDguKLguK0!5e0!3m2!1sen!2sth!4v1493719192909" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+ </div>
+  
+
+
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
 }
+document.getElementById("myLink").click();
+
 
 // Tabbed Menu
 function openMenu(evt, menuName) {
